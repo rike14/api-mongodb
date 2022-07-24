@@ -1,9 +1,10 @@
 const router = require('express').Router()
 
-router.get('/clients', (req, res) => {
-    res.send({
-        ok: 'test'
-    })
-})
+const ProductsController = require('../controllers/products')
+
+router.get('/products', ProductsController.get)
+// router.post('/products', ProductsController.post)
+// router.put('/products/:id', ProductsController.put)
+// router.delete('/products/:id', ProductsController.delete)
 
 module.exports = router
