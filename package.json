@@ -1,0 +1,27 @@
+{
+  "name": "api-mongodb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rike14/api-mongodb.git"
+  },
+  "author": "Henrique M. Kronhardt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rike14/api-mongodb/issues"
+  },
+  "homepage": "https://github.com/rike14/api-mongodb#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.4.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
