@@ -30,7 +30,26 @@ async function post(req, res) {
     })
 }
 
+async function put (req, res) {
+    const { id } = req.params
+
+    // this 'PUT' method, in case it is mandatory to return the updated product
+    
+    const product = await ProductsModel.findOneAndUpdate({_id: id}, req.body, {new: true})
+
+   /* this is another format to make the 'PUT' method, in case it is not mandatory to return the product
+    const product = await ProductsModel.findById({ _id: id})
+
+    await product.updateOne(req.body)
+    */
+
+    res.send({
+        message: 'success',
+        product,
+    }) 
+}
 module.exports = {
     get,
     post,
+    put,
 }
